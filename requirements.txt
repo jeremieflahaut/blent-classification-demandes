@@ -4,16 +4,43 @@ absl-py==2.5.0
     # via
     #   keras
     #   tensorflow
+anyio==4.15.1
+    # via
+    #   httpx
+    #   jupyter-server
 appnope==0.1.4 ; sys_platform == 'darwin'
     # via ipykernel
+argon2-cffi==25.1.0
+    # via jupyter-server
+argon2-cffi-bindings==26.1.0
+    # via argon2-cffi
+arrow==1.4.0
+    # via isoduration
 asttokens==3.0.2
     # via stack-data
 astunparse==1.6.3
     # via tensorflow
+async-lru==2.3.0
+    # via jupyterlab
+attrs==26.1.0
+    # via
+    #   jsonschema
+    #   referencing
+babel==2.18.0
+    # via jupyterlab-server
+beautifulsoup4==4.15.0
+    # via nbconvert
+bleach==6.4.0
+    # via nbconvert
 certifi==2026.7.22
-    # via requests
-cffi==2.1.1 ; implementation_name == 'pypy'
-    # via pyzmq
+    # via
+    #   httpcore
+    #   httpx
+    #   requests
+cffi==2.1.1
+    # via
+    #   argon2-cffi-bindings
+    #   pyzmq
 charset-normalizer==3.4.9
     # via requests
 colorama==0.4.6 ; sys_platform == 'win32'
@@ -26,47 +53,117 @@ cycler==0.12.1
     # via matplotlib
 debugpy==1.8.21
     # via ipykernel
+defusedxml==0.7.1
+    # via nbconvert
 executing==2.2.1
     # via stack-data
+fastjsonschema==2.22.2
+    # via nbformat
 flatbuffers==25.12.19
     # via tensorflow
 fonttools==4.63.0
     # via matplotlib
+fqdn==1.5.1
+    # via jsonschema
 gast==0.7.0
     # via tensorflow
 google-pasta==0.2.0
     # via tensorflow
 grpcio==1.83.0
     # via tensorflow
+h11==0.16.0
+    # via httpcore
 h5py==3.14.0
     # via
     #   keras
     #   tensorflow
+httpcore==1.0.9
+    # via httpx
+httpx==0.28.1
+    # via jupyterlab
 idna==3.18
-    # via requests
+    # via
+    #   anyio
+    #   httpx
+    #   jsonschema
+    #   requests
 ipykernel==7.3.0
+    # via jupyterlab
 ipython==9.16.1
     # via ipykernel
 ipython-pygments-lexers==1.1.1
     # via ipython
+isoduration==20.11.0
+    # via jsonschema
 jedi==0.20.0
     # via ipython
+jinja2==3.1.6
+    # via
+    #   jupyter-server
+    #   jupyterlab
+    #   jupyterlab-server
+    #   nbconvert
 joblib==1.5.3
     # via scikit-learn
+json5==0.15.0
+    # via jupyterlab-server
+jsonpointer==3.1.1
+    # via jsonschema
+jsonschema==4.26.0
+    # via
+    #   jupyter-events
+    #   jupyterlab-server
+    #   nbformat
+jsonschema-specifications==2025.9.1
+    # via jsonschema
+jupyter-builder==1.2.3
+    # via jupyterlab
 jupyter-client==8.9.1
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   jupyter-server
+    #   nbclient
 jupyter-core==5.9.1
     # via
     #   ipykernel
+    #   jupyter-builder
     #   jupyter-client
+    #   jupyter-server
+    #   jupyterlab
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+jupyter-events==0.12.1
+    # via jupyter-server
+jupyter-lsp==2.3.1
+    # via jupyterlab
+jupyter-server==2.21.0
+    # via
+    #   jupyter-lsp
+    #   jupyterlab
+    #   jupyterlab-server
+    #   notebook-shim
+jupyter-server-terminals==0.5.4
+    # via jupyter-server
+jupyterlab==4.6.3
+jupyterlab-pygments==0.3.0
+    # via nbconvert
+jupyterlab-server==2.28.0
+    # via jupyterlab
 keras==3.15.1
     # via tensorflow
 kiwisolver==1.5.0
     # via matplotlib
+lark==1.3.1
+    # via rfc3987-syntax
 libclang==18.1.1
     # via tensorflow
 markdown-it-py==4.2.0
     # via rich
+markupsafe==3.0.3
+    # via
+    #   jinja2
+    #   nbconvert
 matplotlib==3.11.1
     # via
     #   classification-demandes
@@ -77,6 +174,8 @@ matplotlib-inline==0.2.2
     #   ipython
 mdurl==0.1.2
     # via markdown-it-py
+mistune==3.3.4
+    # via nbconvert
 ml-dtypes==0.5.4
     # via
     #   keras
@@ -85,8 +184,19 @@ namex==0.1.0
     # via keras
 narwhals==2.24.0
     # via scikit-learn
+nbclient==0.11.0
+    # via nbconvert
+nbconvert==7.17.1
+    # via jupyter-server
+nbformat==5.11.1
+    # via
+    #   jupyter-server
+    #   nbclient
+    #   nbconvert
 nest-asyncio2==1.7.2
     # via ipykernel
+notebook-shim==0.2.4
+    # via jupyterlab
 numpy==2.5.1
     # via
     #   contourpy
@@ -106,14 +216,21 @@ optree==0.19.1
 packaging==26.2
     # via
     #   ipykernel
+    #   jupyter-events
+    #   jupyter-server
+    #   jupyterlab
+    #   jupyterlab-server
     #   keras
     #   matplotlib
+    #   nbconvert
     #   tensorflow
     #   wheel
 pandas==3.0.5
     # via
     #   classification-demandes
     #   seaborn
+pandocfilters==1.5.1
+    # via nbconvert
 parso==0.8.7
     # via jedi
 pexpect==4.9.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
@@ -122,6 +239,8 @@ pillow==12.3.0
     # via matplotlib
 platformdirs==4.11.0
     # via jupyter-core
+prometheus-client==0.26.0
+    # via jupyter-server
 prompt-toolkit==3.0.53
     # via ipython
 protobuf==7.35.1
@@ -130,38 +249,75 @@ psutil==7.2.2
     # via
     #   ipykernel
     #   ipython
-ptyprocess==0.7.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
-    # via pexpect
+ptyprocess==0.7.0 ; os_name != 'nt' or (sys_platform != 'emscripten' and sys_platform != 'win32')
+    # via
+    #   pexpect
+    #   terminado
 pure-eval==0.2.3
     # via stack-data
-pycparser==3.0 ; implementation_name == 'pypy'
+pycparser==3.0 ; implementation_name != 'PyPy'
     # via cffi
 pygments==2.20.0
     # via
     #   ipython
     #   ipython-pygments-lexers
+    #   nbconvert
     #   rich
 pyparsing==3.3.2
     # via matplotlib
 python-dateutil==2.9.0.post0
     # via
+    #   arrow
     #   jupyter-client
     #   matplotlib
     #   pandas
+python-json-logger==4.2.0
+    # via jupyter-events
+pywinpty==3.0.5 ; os_name == 'nt'
+    # via
+    #   jupyter-server
+    #   jupyter-server-terminals
+    #   terminado
+pyyaml==6.0.3
+    # via jupyter-events
 pyzmq==27.1.0
     # via
     #   ipykernel
     #   jupyter-client
+    #   jupyter-server
+referencing==0.37.0
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+    #   jupyter-events
 requests==2.34.2
-    # via tensorflow
+    # via
+    #   jupyterlab-server
+    #   tensorflow
+rfc3339-validator==0.1.4
+    # via
+    #   jsonschema
+    #   jupyter-events
+rfc3986-validator==0.1.1
+    # via
+    #   jsonschema
+    #   jupyter-events
+rfc3987-syntax==1.1.0
+    # via jsonschema
 rich==15.0.0
     # via keras
+rpds-py==2026.6.3
+    # via
+    #   jsonschema
+    #   referencing
 scikit-learn==1.9.0
     # via classification-demandes
 scipy==1.18.0
     # via scikit-learn
 seaborn==0.13.2
     # via classification-demandes
+send2trash==2.1.0
+    # via jupyter-server
 setuptools==83.0.0
     # via tensorflow
 six==1.17.0
@@ -169,38 +325,72 @@ six==1.17.0
     #   astunparse
     #   google-pasta
     #   python-dateutil
+    #   rfc3339-validator
     #   tensorflow
+soupsieve==2.9.2
+    # via beautifulsoup4
 stack-data==0.6.3
     # via ipython
 tensorflow==2.21.0
     # via classification-demandes
 termcolor==3.3.0
     # via tensorflow
+terminado==0.18.1
+    # via
+    #   jupyter-server
+    #   jupyter-server-terminals
 threadpoolctl==3.6.0
     # via scikit-learn
+tinycss2==1.5.1
+    # via bleach
 tornado==6.5.7
     # via
     #   ipykernel
     #   jupyter-client
+    #   jupyter-server
+    #   jupyterlab
+    #   terminado
 traitlets==5.16.1
     # via
     #   ipykernel
     #   ipython
+    #   jupyter-builder
     #   jupyter-client
     #   jupyter-core
+    #   jupyter-events
+    #   jupyter-server
+    #   jupyterlab
     #   matplotlib-inline
+    #   nbclient
+    #   nbconvert
+    #   nbformat
 typing-extensions==4.16.0
     # via
+    #   anyio
+    #   beautifulsoup4
     #   grpcio
     #   jupyter-client
     #   optree
+    #   referencing
     #   tensorflow
-tzdata==2026.3 ; sys_platform == 'emscripten' or sys_platform == 'win32'
-    # via pandas
+tzdata==2026.3
+    # via
+    #   arrow
+    #   pandas
+uri-template==1.3.0
+    # via jsonschema
 urllib3==2.7.0
     # via requests
 wcwidth==0.8.2
     # via prompt-toolkit
+webcolors==25.10.0
+    # via jsonschema
+webencodings==0.6.1
+    # via
+    #   bleach
+    #   tinycss2
+websocket-client==1.9.2
+    # via jupyter-server
 wheel==0.47.0
     # via astunparse
 wrapt==2.3.0
