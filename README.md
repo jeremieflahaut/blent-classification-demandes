@@ -103,7 +103,7 @@ Le notebook est exécutable de bout en bout (**Restart → Run All**) et suit le
   le jeu de test ;
 - Weighted F1 Score sur le jeu de test, non vu à l'entraînement ni au réglage ;
 - matrice de confusion sur l'ensemble des classes ;
-- courbes de perte entraînement / validation.
+- pertes d'entraînement et de validation affichées à chaque époque.
 
 ## Résultats
 
@@ -198,8 +198,8 @@ corrigé.
 
 ### Limite résiduelle
 
-Après regroupement, `Credit reporting` attire encore 12 à 38 % des prédictions de presque
-toutes les autres catégories, et `Debt collection` jusqu'à 62 %. Il ne s'agit plus de
+Après regroupement, `Credit reporting` attire encore 12 à 38 % des plaintes de six des dix
+autres catégories, et `Debt collection` jusqu'à 62 %. Il ne s'agit plus de
 redondance de libellés mais d'un chevauchement thématique réel : une réclamation portant
 sur un prêt impayé évoque nécessairement le recouvrement et le fichage. Ce chevauchement
 n'est pas réductible par le texte seul et constitue la limite du score obtenu.
